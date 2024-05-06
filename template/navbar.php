@@ -1,7 +1,7 @@
 <?php session_start();?>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">PostsBase</a>
+        <a class="navbar-brand" href="#">Spontan Fotboll Stockholm</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -11,15 +11,15 @@
                     <a class="nav-link active" aria-current="page" href="/phpDev/index.php">Hem</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/phpDev/message/messagesList.php">Gruppen</a>
+                    <a class="nav-link" href="/phpDev/message/messagesList.php">Diskussion</a>
                 </li>
                 <?php if(isset($_SESSION['userid'])): ?>
                     <li class="nav-item">
-                        <a class="nav-link" href="/phpDev/login/logout.php"">logga ut</a>
+                        <a class="nav-link" href="/phpDev/login/logout.php""><b>Logga ut</></a>
                     </li>
                 <?php else: ?>
                     <li class="nav-item">
-                        <a class="nav-link" href="/phpDev/login/loginUser.php"">login</a>
+                        <a class="nav-link" href="/phpDev/login/loginUser.php""><b>Logga in</b></a>
                     </li>
                 <?php endif; ?>
             </ul>

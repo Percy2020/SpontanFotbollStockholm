@@ -13,9 +13,6 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/phpDev/message/messagesList.php">Gruppen</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
-                </li>
                 <?php if(isset($_SESSION['userid'])): ?>
                     <li class="nav-item">
                         <a class="nav-link" href="/phpDev/login/logout.php"">logga ut</a>
@@ -26,10 +23,6 @@
                     </li>
                 <?php endif; ?>
             </ul>
-             <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
         </div>
     </div>
 </nav>

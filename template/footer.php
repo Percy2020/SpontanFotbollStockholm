@@ -1,4 +1,4 @@
 <footer>
-    <p>&copy; <?php echo date("Y"); ?> My Website. All rights reserved.</p>
-    <p>Contact us at <a href="mailto:email@example.com">email@example.com</a>.</p>
+    <p>&copy; <?php echo date("Y"); ?> Spontan Fotboll Stockholm, Alla rättigheter reserverade.</p>
+    <p>Kontakta oss <a href="mailto:percyvillegastello@gmail.com">percyvillegastello@gmail.com</a>.</p>
 </footer>

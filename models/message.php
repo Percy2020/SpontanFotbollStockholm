@@ -122,16 +122,16 @@ class Message {
         return false;
     }
 
-    // Delete a user
+    // Delete a message
     public function delete() {
-        $query = "DELETE FROM " . $this->table_name . " WHERE id = :id";
+        $query = "DELETE FROM " . $this->table_name . " WHERE message_id = :message_id";
         $stmt = $this->conn->prepare($query);
 
         // sanitize
-        $this->id = htmlspecialchars(strip_tags($this->id));
+        $this->message_id = htmlspecialchars(strip_tags($this->message_id));
 
         // bind id
-        $stmt->bindParam(':id', $this->id);
+        $stmt->bindParam(':message_id', $this->message_id);
 
         if ($stmt->execute()) {
             return true;

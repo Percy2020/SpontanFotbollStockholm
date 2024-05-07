@@ -11,7 +11,7 @@
     <p>Har ni frågor kontakta oss.</p>
     <p>Vänliga Hälsningar</p>
     <p>Percy VT</p>
-    <p>Flemingsbers IF / APM</p>
+    <p>Flemingsbergs IF / APM</p>
     </div>
     <?php include 'template/footer.php'; ?>
 </body>

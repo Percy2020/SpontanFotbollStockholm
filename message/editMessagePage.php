@@ -28,7 +28,7 @@ if (isset($_GET['message_id']) && is_numeric($_GET['message_id'])) {
 </head>
 <body>
     <?php include '../template/header.php'; ?>
-    
+    <div class="container">
     <h2>Edit message</h2>
     <form action="update.php" method="post">
     <input type="hidden" id="message_id" name="message_id" value="<?php echo $_GET['message_id']; ?>">

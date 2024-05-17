@@ -4,7 +4,7 @@
     <?php include '../template/header.php'; ?>
 <div class="container">
   <h2>Spontan Fotboll Stockholm</h2>
-  <p>Logga in och se vart du kan spela i stockholm</p>
+  <p>Logga in och se vart du kan spela fotboll i Stockholm nu</p>
   <form method="post" action="login.php">
     <div class="form-group">
       <label for="usr">Användarnamn:</label>

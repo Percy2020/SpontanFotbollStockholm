@@ -10,12 +10,14 @@
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="/phpDev/index.php">Hem</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/phpDev/message/messagesList.php">Diskussion</a>
-                </li>
+                <?php if(isset($_SESSION['userid'])) : ?>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/phpDev/message/messagesList.php">Diskussion</a>
+                    </li>
+                <?php endif; ?>
                 <?php if(isset($_SESSION['userid'])): ?>
                     <li class="nav-item">
-                        <a class="nav-link" href="/phpDev/login/logout.php""><b>Logga ut</></a>
+                        <a class="nav-link" href="/phpDev/login/logout.php""><b>Logga ut</b></a>
                     </li>
                 <?php else: ?>
                     <li class="nav-item">

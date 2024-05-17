@@ -27,6 +27,7 @@ class Message {
         $stmt->bindParam(":parent_id", $this->parent_id);
 
         if ($stmt->execute()) {
+            $this->message_id = $this->conn->lastInsertId();
             return true;
         }
 

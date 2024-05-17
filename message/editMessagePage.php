@@ -24,16 +24,16 @@ if (isset($_GET['message_id']) && is_numeric($_GET['message_id'])) {
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Edit message</title>
+    <title>Editera meddelande</title>
 </head>
 <body>
     <?php include '../template/header.php'; ?>
     <div class="container">
-    <h2>Edit message</h2>
+    <h2>Editera meddelande</h2>
     <form action="update.php" method="post">
     <input type="hidden" id="message_id" name="message_id" value="<?php echo $_GET['message_id']; ?>">
         <div class="form-outline">
-            <label class="form-label" for="message">Message</label>
+            <label class="form-label" for="message">Meddelande</label>
             <textarea class="form-control" id="message" name="message" rows="4"><?php echo htmlspecialchars($message->message) ?></textarea>
         </div>
         </br>

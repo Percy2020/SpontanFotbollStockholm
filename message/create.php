@@ -1,11 +1,13 @@
 <?php
 include_once '../config/db.php';
 include_once '../models/message.php';
+include_once '../models/imageUploader.php';
 
 $database = new Database();
 $db = $database->getConnection();
 
 $message = new Message($db);
+$uploader = new ImageUploader($db);
     
 session_start();
 
@@ -15,8 +17,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $message->parent_id = isset($_POST["parent_id"]) ? $_POST["parent_id"] : NULL;
     if ($message->create()) {
         //Message was created
-         header("Location: messagesList.php");
-         exit;
+        $uploader->message_id = $message->message_id;
+        if ($uploader->upload($_FILES["fileUpload"])) {
+            header("Location: messagesList.php");
+            exit;
+         }
     } else {
         echo "Unable to create user.";
     }

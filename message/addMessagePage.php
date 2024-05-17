@@ -33,7 +33,7 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
     <form action="create.php" method="post">
     <input type="hidden" id="parent_id" name="parent_id" value="<?php echo $_GET['parent_id']; ?>">
         <div class="form-outline">
-            <label class="form-label" for="message">Message</label>
+            <label class="form-label" for="message">Meddelande</label>
             <textarea class="form-control" id="message" name="message" rows="4"></textarea>
         </div>
         </br>
